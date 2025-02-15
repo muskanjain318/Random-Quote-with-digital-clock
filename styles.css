@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+}
+
+.clock-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.clock {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  padding: clamp(0.8rem, 3vw, 1rem) clamp(1.2rem, 4vw, 2rem);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  display: inline-block;
+}
+
+.quote-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: clamp(1.2rem, 4vw, 2rem);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.quote {
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.author {
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  color: #e0e0e0;
+  margin-bottom: clamp(1.5rem, 5vw, 2rem);
+}
+
+.button {
+  background: #fff;
+  color: #1e3c72;
+  border: none;
+  padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.2rem, 4vw, 1.5rem);
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-weight: 600;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Media Queries for different screen sizes */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .quote-container {
+    padding: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+  
+  .quote-container {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 2.5rem;
+  }
+}
+
+/* Landscape mode optimization */
+@media (max-height: 600px) and (orientation: landscape) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .clock-container {
+    margin-bottom: 1rem;
+  }
+  
+  .quote-container {
+    padding: 1.5rem;
+  }
+}
